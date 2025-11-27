@@ -27,6 +27,7 @@ export default function TodoForm({ onAdd }: TodoFormProps) {
           onChange={(e) => setInput(e.target.value)}
           placeholder="새로운 할 일을 입력하세요..."
           className="flex-1 px-6 py-4 rounded-xl border-2 border-teal-200 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200 text-lg transition-all duration-200 bg-white"
+          autoComplete="off"
         />
         <button
           type="submit"

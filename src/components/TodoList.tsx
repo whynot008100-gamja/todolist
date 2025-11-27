@@ -15,9 +15,11 @@ export interface Todo {
 export default function TodoList() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
+  const [mounted, setMounted] = useState(false);
 
-  // 로컬 스토리지에서 todos 불러오기
+  // 마운트 후 로컬 스토리지에서 todos 불러오기
   useEffect(() => {
+    setMounted(true);
     const savedTodos = localStorage.getItem("todos");
     if (savedTodos) {
       try {
@@ -34,10 +36,12 @@ export default function TodoList() {
     }
   }, []);
 
-  // todos 변경 시 로컬 스토리지에 저장
+  // todos 변경 시 로컬 스토리지에 저장 (마운트된 후에만)
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+    if (mounted) {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  }, [todos, mounted]);
 
   const handleAdd = (title: string) => {
     const newTodo: Todo = {
