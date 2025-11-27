@@ -37,6 +37,37 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  /* 커스텀 색상 팔레트 */
+  --color-rose-50: var(--rose-50);
+  --color-rose-100: var(--rose-100);
+  --color-rose-200: var(--rose-200);
+  --color-rose-300: var(--rose-300);
+  --color-rose-400: var(--rose-400);
+  --color-rose-500: var(--rose-500);
+  --color-rose-600: var(--rose-600);
+  --color-rose-700: var(--rose-700);
+  --color-rose-800: var(--rose-800);
+  --color-rose-900: var(--rose-900);
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-200: var(--teal-200);
+  --color-teal-300: var(--teal-300);
+  --color-teal-400: var(--teal-400);
+  --color-teal-500: var(--teal-500);
+  --color-teal-600: var(--teal-600);
+  --color-teal-700: var(--teal-700);
+  --color-teal-800: var(--teal-800);
+  --color-teal-900: var(--teal-900);
+  --color-orange-50: var(--orange-50);
+  --color-orange-100: var(--orange-100);
+  --color-orange-200: var(--orange-200);
+  --color-orange-300: var(--orange-300);
+  --color-orange-400: var(--orange-400);
+  --color-orange-500: var(--orange-500);
+  --color-orange-600: var(--orange-600);
+  --color-orange-700: var(--orange-700);
+  --color-orange-800: var(--orange-800);
+  --color-orange-900: var(--orange-900);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -45,37 +76,74 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  
+  /* 커스텀 색상 팔레트 - 로즈 계열 */
+  --rose-50: rgb(250, 235, 235);
+  --rose-100: rgb(240, 210, 210);
+  --rose-200: rgb(230, 180, 180);
+  --rose-300: rgb(220, 150, 150);
+  --rose-400: rgb(203, 123, 123);
+  --rose-500: rgb(186, 97, 97);  /* 기본 색상 */
+  --rose-600: rgb(165, 80, 80);
+  --rose-700: rgb(140, 65, 65);
+  --rose-800: rgb(115, 50, 50);
+  --rose-900: rgb(90, 40, 40);
+  
+  /* 커스텀 색상 팔레트 - 틸 계열 */
+  --teal-50: rgb(230, 245, 245);
+  --teal-100: rgb(200, 230, 230);
+  --teal-200: rgb(150, 210, 210);
+  --teal-300: rgb(100, 180, 180);
+  --teal-400: rgb(80, 158, 159);
+  --teal-500: rgb(61, 136, 137);  /* 기본 색상 */
+  --teal-600: rgb(50, 115, 116);
+  --teal-700: rgb(40, 95, 96);
+  --teal-800: rgb(30, 75, 76);
+  --teal-900: rgb(20, 55, 56);
+  
+  /* 커스텀 색상 팔레트 - 오렌지 계열 */
+  --orange-50: rgb(255, 245, 235);
+  --orange-100: rgb(255, 230, 210);
+  --orange-200: rgb(255, 210, 175);
+  --orange-300: rgb(240, 185, 140);
+  --orange-400: rgb(232, 171, 114);
+  --orange-500: rgb(223, 157, 88);  /* 기본 색상 */
+  --orange-600: rgb(200, 135, 70);
+  --orange-700: rgb(175, 115, 55);
+  --orange-800: rgb(150, 95, 45);
+  --orange-900: rgb(125, 75, 35);
+  
+  --background: oklch(0.99 0.005 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --primary: rgb(61, 136, 137);  /* 틸 기본 색상 */
+  --primary-foreground: rgb(255, 255, 255);
+  --secondary: rgb(240, 210, 210);  /* 로즈 라이트 */
+  --secondary-foreground: rgb(140, 65, 65);
+  --muted: rgb(245, 245, 245);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --accent: rgb(223, 157, 88);  /* 오렌지 기본 색상 */
+  --accent-foreground: rgb(255, 255, 255);
+  --destructive: rgb(186, 97, 97);  /* 로즈 기본 색상 */
+  --border: rgb(230, 230, 230);
+  --input: rgb(245, 245, 245);
+  --ring: rgb(61, 136, 137);
+  --chart-1: rgb(186, 97, 97);
+  --chart-2: rgb(61, 136, 137);
+  --chart-3: rgb(223, 157, 88);
+  --chart-4: rgb(203, 123, 123);
+  --chart-5: rgb(80, 158, 159);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-primary: rgb(61, 136, 137);
+  --sidebar-primary-foreground: rgb(255, 255, 255);
+  --sidebar-accent: rgb(240, 210, 210);
+  --sidebar-accent-foreground: rgb(140, 65, 65);
+  --sidebar-border: rgb(230, 230, 230);
+  --sidebar-ring: rgb(61, 136, 137);
 }
 
 .dark {
